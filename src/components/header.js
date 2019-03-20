@@ -1,39 +1,22 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 
-import "../styles/index.scss"
+import { Navbar, Nav } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => {
   return (
-  <header>
-    <nav
-      className="navbar is-dark"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <Link className="navbar-brand" to="/">
-        <div className="navbar-item">{siteTitle}</div>
+    <Navbar bg="dark" variant="dark">
+      <Link to="/">
+        <Navbar.Brand>
+          {siteTitle}
+        </Navbar.Brand>
       </Link>
-
-      <div id="blogCategory" className="navbar-menu">
-        <div className="navbar-start">
-          <Link className="navbar-item" to="/about">
-            About
-          </Link>
-          <Link className="navbar-item" to="/stack">
-            Stack
-          </Link>
-          <Link className="navbar-item" to="/blog">
-            Blog
-          </Link>
-          <Link className="navbar-item" to="/book">
-            Book
-          </Link>
-        </div>
-      </div>
-    </nav>
-  </header>
+      <Nav className="mr-auto">
+        <Nav.Link href="/about">About</Nav.Link>
+        <Nav.Link href="/post">Post</Nav.Link>
+      </Nav>
+    </Navbar>
   )
 }
 

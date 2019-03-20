@@ -1,10 +1,5 @@
 
 
-// $primary: #123123;
-// $link: ;
-// $info: ;
-// $success: ;
-// $warning: ;
-// $danger: ;
+@import './base';
 
-@import '../../node_modules/bulma/bulma.sass';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
