@@ -2,7 +2,6 @@
 title: 'First Post - Introduction'
 date: 2019-03-19 09:42:00
 author: 'hansol'
-path: '/first-post'
 tags:
 - code
 - design

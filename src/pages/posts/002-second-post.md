@@ -2,7 +2,6 @@
 title: 'Second Post - HTML'
 date: 2019-03-20 09:42:00
 author: 'hansol'
-path: '/second-post'
 tags:
 - design
 - test
