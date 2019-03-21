@@ -14,11 +14,13 @@ const IndexPage = () => (
         <div className="container">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <Post 
+              key={node.id}
               title={node.frontmatter.title} 
               author={node.frontmatter.author}
               path={node.frontmatter.path}
               date={node.frontmatter.date}
               body={node.excerpt}
+              tags={node.frontmatter.tags}
             />
           ))}
         </div>
@@ -38,6 +40,7 @@ const indexQuery = graphql`
             date(formatString: "MMM Do YYYY")
             author
             path
+            tags
           }
           excerpt
         }
