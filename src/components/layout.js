@@ -10,9 +10,9 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./Header"
-// import Footer from "./Footer";
+import Footer from "./Footer"
 
-import '../styles/index.scss'
+import "../styles/index.scss"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,12 +27,19 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header 
-          siteTitle={data.site.siteMetadata.title} 
-          pages={['about', 'tags']}
+        {/* Font Awesome */}
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+          integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
+          crossOrigin="anonymous"
         />
-          <main>{children}</main>
-        {/* <Footer /> */}
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          pages={["about", "tags"]}
+        />
+        <main>{children}</main>
+        <Footer />
       </>
     )}
   />

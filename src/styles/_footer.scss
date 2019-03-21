@@ -1,0 +1,26 @@
+.site-footer {
+
+  background-color: $white;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+
+  .footer-social-links {
+    text-align: center;
+
+    ul.social-links-list {
+      li {
+        margin-right: 25px;
+        display: inline-block;
+
+        a {
+          color: darkgray;
+
+          &.github:hover {
+            color: #4078c0;
+          }
+        }
+      }
+    }
+  }
+}
