@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Badge } from 'react-bootstrap'
+import { Badge, Jumbotron } from 'react-bootstrap'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -11,8 +11,10 @@ const SinglePost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} />
-      <h1>{post.title}</h1>
-      <h2>{post.author}</h2>
+      <Jumbotron>
+        <h1>{post.title}</h1>
+        <p>{post.author}</p>
+      </Jumbotron>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       <ul>
         {post.tags.map(tag => (

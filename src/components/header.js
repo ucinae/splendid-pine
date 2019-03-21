@@ -6,7 +6,7 @@ import { Navbar, Nav } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar sticky="top" bg="dark" variant="dark">
       <Link to="/">
         <Navbar.Brand>
           {siteTitle}
