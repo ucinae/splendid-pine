@@ -6,9 +6,8 @@ import SEO from "../components/seo"
 import Post from "../components/Post"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout pageTitle="Splendid Pine">
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1 className="container my-4">Latest posts...</h1>
     <StaticQuery query={indexQuery} render={data => {
       return (
         <div className="container">

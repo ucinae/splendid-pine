@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Badge, Jumbotron } from 'react-bootstrap'
+import { Badge } from 'react-bootstrap'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -9,12 +9,8 @@ import { slugify } from '../utils/utilityFunctions'
 const SinglePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   return (
-    <Layout>
+    <Layout pageTitle={post.title}>
       <SEO title={post.title} />
-      <Jumbotron>
-        <h1>{post.title}</h1>
-        <p>{post.author}</p>
-      </Jumbotron>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       <ul>
         {post.tags.map(tag => (
