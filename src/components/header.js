@@ -15,6 +15,7 @@ const Header = ({ siteTitle }) => {
       <Nav className="mr-auto">
         <Nav.Link href="/about">About</Nav.Link>
         <Nav.Link href="/post">Post</Nav.Link>
+        <Nav.Link href="/tags">Tags</Nav.Link>
       </Nav>
     </Navbar>
   )
