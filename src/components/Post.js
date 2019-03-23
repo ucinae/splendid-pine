@@ -16,7 +16,7 @@ const Post = ({ title, author, slug, date, body, tags }) => {
           {
             tags.map(tag => (
               <li key={tag}>
-                <Link to={`/tag/${slugify(tag)}`}>
+                <Link to={`/tags/${slugify(tag)}`}>
                   <Badge pill variant="primary" className="text-uppercase">{tag}</Badge>
                 </Link>
               </li>
