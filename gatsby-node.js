@@ -46,8 +46,10 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Create single blog post pages
     posts.forEach(({node}) => {
+      console.log(typeof node.fields.slug)
+      console.log(node.fields.slug)
       createPage({
-        path: node.fields.slug,
+        path: `/${node.fields.slug}`,
         component: templates.singlePost,
         context: {
           // Passing slug for template to use to get post
@@ -84,7 +86,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create tag posts pages
     tags.forEach(tag => {
       createPage({
-        path: `/tags/${slugify(tag)}`,
+        path: `/tag/${slugify(tag)}`,
         component: templates.tagPosts,
         context: {
           tag,
@@ -92,7 +94,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    const postsPerPage = 2
+    const postsPerPage = 5
     const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numberOfPages }).forEach((_, index) => {

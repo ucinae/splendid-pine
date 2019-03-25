@@ -16,7 +16,7 @@ const Post = ({ title, author, slug, date, body, tags }) => {
           {
             tags.map(tag => (
               <li key={tag}>
-                <Link to={`/tags/${slugify(tag)}`}>
+                <Link to={`/tag/${slugify(tag)}`}>
                   <Badge pill variant="primary" className="text-uppercase">{tag}</Badge>
                 </Link>
               </li>
@@ -27,7 +27,7 @@ const Post = ({ title, author, slug, date, body, tags }) => {
           <span className="text-info">{date}</span> by{' '}
           <span className="text-info">{author}</span>
         </Card.Text>
-        <Link to={slug}>
+        <Link to={`/${slug}`}>
           <Button>Read more</Button>
         </Link>
       </Card.Body>

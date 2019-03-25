@@ -6,16 +6,28 @@ import { Navbar, Nav } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => {
   return (
-    <Navbar sticky="top" bg="dark" variant="dark">
+    <Navbar sticky="top" bg="dark" variant="dark" className="header-body">
       <Link to="/">
         <Navbar.Brand>
           {siteTitle}
         </Navbar.Brand>
       </Link>
       <Nav className="mr-auto">
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/post">Post</Nav.Link>
-        <Nav.Link href="/tags">Tags</Nav.Link>
+        <Nav.Item>
+          <Link to="/about" className="nav-link">
+            About
+          </Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to="/post" className="nav-link">
+            Post
+          </Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to="/tags" className="nav-link">
+            Tags
+          </Link>
+        </Nav.Item>
       </Nav>
     </Navbar>
   )
