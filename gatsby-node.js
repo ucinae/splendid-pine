@@ -46,8 +46,6 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Create single blog post pages
     posts.forEach(({node}) => {
-      console.log(typeof node.fields.slug)
-      console.log(node.fields.slug)
       createPage({
         path: `/${node.fields.slug}`,
         component: templates.singlePost,
