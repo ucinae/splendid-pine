@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { Button, Badge } from 'react-bootstrap'
 import { slugify } from '../utils/utilityFunctions'
+import { Link } from 'gatsby'
 
 const tagsPage = ({ pageContext }) => {
   const { tags, tagPostCounts } = pageContext
@@ -13,9 +14,11 @@ const tagsPage = ({ pageContext }) => {
         {
           tags.map(tag => (
             <li key={tag} style={{ marginBottom: '10px' }}>
-              <Button href={`/tags/${slugify(tag)}`}>
-                {tag} <Badge>{tagPostCounts[tag]}</Badge>
-              </Button>
+              <Link to={`/tag/${slugify(tag)}`}>
+                <Button>
+                  {tag} <Badge>{tagPostCounts[tag]}</Badge>
+                </Button>
+              </Link>
             </li>
           ))
         }

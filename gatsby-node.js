@@ -84,7 +84,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create tag posts pages
     tags.forEach(tag => {
       createPage({
-        path: `/tags/${slugify(tag)}`,
+        path: `/tag/${slugify(tag)}`,
         component: templates.tagPosts,
         context: {
           tag,
@@ -92,14 +92,16 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    const postsPerPage = 2
+    const postsPerPage = 5
     const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numberOfPages }).forEach((_, index) => {
-      const isFirstPage = index === 0
+      // const isFirstPage = index === 0
       const currentPage = index + 1
 
-      if(isFirstPage) return
+      // 첫페이지를 안 만들면 Warning이 뜬다.
+      // 첫페이지가 필요해 보이니 만드는 것도 좋은거같다.
+      //if(isFirstPage) return
 
       createPage({
         path: `/page/${currentPage}`,
