@@ -13,6 +13,7 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Splendid Pine">
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+       {/* TODO 인덱스 페이지에 다른 사이트 인덱스처럼 멋지게 만들기 + 솔스타그램 만들기  */}
       <StaticQuery
         query={indexQuery}
         render={data => {
