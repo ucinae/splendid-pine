@@ -29,6 +29,14 @@ const Header = ({ siteTitle }) => {
           </Link>
         </Nav.Item>
       </Nav>
+
+      <Nav>
+        <Nav.Item>
+          <Link to="/solstagram" className="nav-link solstagram">
+            Solstagram
+          </Link>
+        </Nav.Item>
+      </Nav>
     </Navbar>
   )
 }
