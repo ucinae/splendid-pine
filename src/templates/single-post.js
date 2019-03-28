@@ -9,7 +9,7 @@ import { slugify } from '../utils/utilityFunctions'
 const SinglePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   return (
-    <Layout pageTitle={post.title}>
+    <Layout>
       <SEO title={post.title} />
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       <ul>

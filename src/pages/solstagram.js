@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 const solstagram = () => {
   return (
-    <Layout pageTitle="Solstagarm">
+    <Layout>
       <SEO title="Solstagarm" keywords={[`gatsby`, `application`, `react`]} />
       <Container>
         <Row>
