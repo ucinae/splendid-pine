@@ -1,69 +1,42 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Post from '../components/Post'
-import PaginationLinks from '../components/PaginationLinks'
+import MainImage from '../images/coding.jpg'
 
 const IndexPage = () => {
-  const postsPerPage = 5
-  let numberOfPages
-
   return (
-    <Layout pageTitle="Splendid Pine">
+    <Layout pageTitle="공부하는 블로그">
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
        {/* TODO 인덱스 페이지에 다른 사이트 인덱스처럼 멋지게 만들기 + 솔스타그램 만들기  */}
-      <StaticQuery
-        query={indexQuery}
-        render={data => {
-          numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postsPerPage)
-          return (
-            <div className="container">
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Post
-                  key={node.id}
-                  title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  slug={node.fields.slug}
-                  date={node.frontmatter.date}
-                  body={node.excerpt}
-                  tags={node.frontmatter.tags}
-                />
-              ))}
-              <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />
+      <Container>
+        <Image src={MainImage} fluid></Image>
+      </Container>
+      <Container>
+        <Row>
+          <Col>
+            <div className="text-center">
+              <i className="fas fa-code fa-10x"></i>
+              <h2>WEB</h2>
             </div>
-          )
-        }}
-      />
+          </Col>
+          <Col>
+            <div className="text-center">
+              <i className="fas fa-mobile-alt fa-10x" />
+              <h2>MOBILE</h2>
+            </div>
+          </Col>
+          <Col>
+            <div className="text-center">
+            <i className="fas fa-brain fa-10x"></i>
+              <h2>ML</h2>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   )
 }
-
-const indexQuery = graphql`
-  query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 5
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM Do YYYY")
-            author
-            tags
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

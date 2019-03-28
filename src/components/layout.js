@@ -14,8 +14,6 @@ import Footer from "./Footer"
 
 import "../styles/index.scss"
 
-import { Container } from 'react-bootstrap'
-
 const Layout = ({ children, pageTitle }) => (
   <StaticQuery
     query={graphql`
@@ -40,10 +38,8 @@ const Layout = ({ children, pageTitle }) => (
           siteTitle={data.site.siteMetadata.title}
           pages={["about", "tags"]}
         />
-        <Container>
           <h1 className="text-center my-3">{pageTitle}</h1>
           <main>{children}</main>
-        </Container>
         <Footer />
       </>
     )}
