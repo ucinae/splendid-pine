@@ -14,8 +14,6 @@ import Footer from "./Footer"
 
 import "../styles/index.scss"
 
-import { Container } from 'react-bootstrap'
-
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
