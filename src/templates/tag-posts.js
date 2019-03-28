@@ -11,7 +11,7 @@ const tagPosts = ({ data, pageContext }) => {
   } tagged with "${tag}"`
 
   return (
-    <Layout pageTitle={pageHeader}>
+    <Layout>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post
           key={node.id}

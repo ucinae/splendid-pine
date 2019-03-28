@@ -2,6 +2,7 @@ import React from 'react'
 import { Pagination } from 'react-bootstrap'
 
 const PaginationLinks =({ currentPage, numberOfPages }) => {
+  // TODO 페이지는 Post에만 둘 예정이므로 1번으로 이동하면 '/'가 아닌 '/page/1'로 이동하도록 변경할 것
   const isFirst = currentPage === 1
   const isLast = currentPage === numberOfPages
   const previousPage = currentPage - 1 === 1 ? '/' : '/page/' + (currentPage - 1).toString()

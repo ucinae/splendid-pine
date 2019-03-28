@@ -8,18 +8,20 @@ import { Link } from 'gatsby'
 const tagsPage = ({ pageContext }) => {
   const { tags, tagPostCounts } = pageContext
   return (
-    <Layout pageTitle="All tags">
+    <Layout>
       <SEO title="All tags" keywords={['tags', 'topics']} />
       <ul>
-        {tags.map(tag => (
-          <li key={tag} style={{ marginBottom: '10px' }}>
-            <Link to={`/tag/${slugify(tag)}`}>
-              <Button>
-                {tag} <Badge>{tagPostCounts[tag]}</Badge>
-              </Button>
-            </Link>
-          </li>
-        ))}
+        {
+          tags.map(tag => (
+            <li key={tag} style={{ marginBottom: '10px' }}>
+              <Link to={`/tag/${slugify(tag)}`}>
+                <Button>
+                  {tag} <Badge>{tagPostCounts[tag]}</Badge>
+                </Button>
+              </Link>
+            </li>
+          ))
+        }
       </ul>
     </Layout>
   )

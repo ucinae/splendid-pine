@@ -16,7 +16,7 @@ import "../styles/index.scss"
 
 import { Container } from 'react-bootstrap'
 
-const Layout = ({ children, pageTitle }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -40,10 +40,7 @@ const Layout = ({ children, pageTitle }) => (
           siteTitle={data.site.siteMetadata.title}
           pages={["about", "tags"]}
         />
-        <Container>
-          <h1 className="text-center my-3">{pageTitle}</h1>
           <main>{children}</main>
-        </Container>
         <Footer />
       </>
     )}

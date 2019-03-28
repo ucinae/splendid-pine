@@ -19,13 +19,21 @@ const Header = ({ siteTitle }) => {
           </Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/post" className="nav-link">
+          <Link to="/page/1" className="nav-link">
             Post
           </Link>
         </Nav.Item>
         <Nav.Item>
           <Link to="/tags" className="nav-link">
             Tags
+          </Link>
+        </Nav.Item>
+      </Nav>
+
+      <Nav>
+        <Nav.Item>
+          <Link to="/solstagram" className="nav-link solstagram">
+            Solstagram
           </Link>
         </Nav.Item>
       </Nav>
