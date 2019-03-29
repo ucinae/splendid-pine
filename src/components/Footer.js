@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="site-footer">
       <h4 className="text-center">Splendid Pine</h4>
-      <p className="text-center">Follow us on social media</p>
+      <p className="text-center">Design by Bootstrap</p>
       <div className="footer-social-links">
         <ul className="social-links-list">
           <li>

@@ -8,7 +8,7 @@ const PaginationLinks =({ currentPage, numberOfPages }) => {
   const previousPage = currentPage - 1 === 1 ? '/' : '/page/' + (currentPage - 1).toString()
   const nextPage = '/page/' + (currentPage + 1).toString()
   return (
-    <Pagination>
+    <Pagination className="justify-content-center">
       {isFirst ? (
         <Pagination.Prev href='/' disabled />
       ) : (

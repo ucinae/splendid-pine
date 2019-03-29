@@ -4,6 +4,10 @@ body {
   font-family: $site-font
 }
 
+.container {
+  min-height: 1080px;
+}
+
 .text-info {
   color: blue;
 }
