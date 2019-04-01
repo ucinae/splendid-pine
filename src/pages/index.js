@@ -42,7 +42,7 @@ const IndexPage = (props) => {
                     <i className="fas fa-mobile-alt fa-5x mt-3"></i>
                     <Card.Title className="mt-5">MOBILE</Card.Title>
                     <Card.Text>
-                      Android, Java, Kotiln, Flutter
+                      Android, Java, Kotlin, Flutter
                     </Card.Text>
                   </Card.Body>
                 </Col>

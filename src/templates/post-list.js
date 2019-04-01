@@ -13,12 +13,13 @@ const postList = props => {
 
   return (
     <Layout>
-      <Container>
+      <Container className="mt-4">
         {posts.map(({ node }) => (
           <Post
             key={node.id}
             slug={node.fields.slug}
             title={node.frontmatter.title}
+            subtitle={node.frontmatter.subtitle}
             author={node.frontmatter.author}
             date={node.frontmatter.date}
             body={node.excerpt}
@@ -43,6 +44,7 @@ export const postListQuery = graphql`
           id
           frontmatter {
             title
+            subtitle
             date(formatString: "MMMM Do YYYY")
             author
             tags

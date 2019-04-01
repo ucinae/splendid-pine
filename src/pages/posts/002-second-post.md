@@ -1,5 +1,6 @@
 ---
 title: 'Second Post - HTML'
+subtitle: '블로그를 꾸미고 다듬기'
 date: 2019-03-20 09:42:00
 author: 'hansol'
 tags:

@@ -11,20 +11,18 @@ const tagsPage = ({ pageContext }) => {
   return (
     <Layout>
       <SEO title="All tags" keywords={['tags', 'topics']} />
-        <Container>
-          <ul>
+        <Container className="mt-4">
             {
               tags.map(tag => (
-                <li key={tag} style={{ marginBottom: '10px' }}>
+                <div key={tag} className="mx-2" style={{ marginBottom: '10px', display: 'inline-block' }}>
                   <Link to={`/tag/${slugify(tag)}`}>
                     <Button>
                       {tag} <Badge>{tagPostCounts[tag]}</Badge>
                     </Button>
                   </Link>
-                </li>
+                </div>
               ))
             }
-          </ul>
         </Container>
     </Layout>
   )

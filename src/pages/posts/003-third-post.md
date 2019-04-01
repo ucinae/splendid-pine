@@ -1,5 +1,6 @@
 ---
 title: 'Third Post - Lorem Ipsum'
+subtitle: '블로그 마무리짓기'
 date: 2019-03-21 09:42:00
 author: '한솔'
 tags:
