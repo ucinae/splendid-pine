@@ -9,7 +9,7 @@ tags:
 - docs
 ---
 
-# React Docs 시리즈 1
+# React Docs으로 공부하는 React 1. Higher-Order Component
 
 > 본 시리즈는 reactjs.org의 Docs 강의를 따라가며 공부한걸 정리한 내용입니다.
 
