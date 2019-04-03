@@ -13,7 +13,7 @@ const SinglePost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} />
-      <Container className="mt-5">
+      <Container className="markdown-body">
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         <ul>
           {post.tags.map(tag => (
