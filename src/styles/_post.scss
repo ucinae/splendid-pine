@@ -1,3 +1,10 @@
 .markdown-body {
-  
+  .language-text {
+    background: none;
+    color: tomato;
+  }
+
+  code {
+    font-family: $code-font;
+  }
 }

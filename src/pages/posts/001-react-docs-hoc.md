@@ -21,10 +21,9 @@ tags:
 
 hoc는 컴포넌트를 받아서 새로운 컴포넌트를 return하는 함수다. 특정 상황에만 기능을 추가하거나, 여러 컴포넌트에 동일한 기능을 추가하고 싶을 때 사용하면 유용하다.
 
-```react
+```jsx
 const 강화된컴포넌트 = 하이오더컴포넌트(포장될컴포넌트);
 ```
-
 그냥 컴포넌트가 `props`를 통해 UI를 변형시킨다면, HOC는 컴포넌트를 통해 컴포넌트를 변형시킨다.
 
 HOC들은 Redux의 [`connect`](https://github.com/reduxjs/react-redux/blob/master/docs/api/connect.md#connect)나 Relay의 [`createFragmentContainer`](http://facebook.github.io/relay/docs/en/fragment-container.html) 같은 third-party 라이브러리다.
@@ -45,7 +44,7 @@ HOC들은 Redux의 [`connect`](https://github.com/reduxjs/react-redux/blob/maste
 
 예를들어, `CommentList` 컴포넌트가 외부 데이터를 subscribe하며 댓글 리스트를 render하고 있는 상황을 보자.
 
-```react
+```jsx
 class CommentList extends React.Comopnent {
   constructor(props) {
     super(props);
@@ -87,7 +86,7 @@ class CommentList extends React.Comopnent {
 
 나중에 이와 비슷한 패턴으로 blog post 하나를 subscribe하는 코드를 작성한다면 비슷한 패턴을 따르게 된다.
 
-```react
+```jsx
 class BlogPost extends React.Component {
   constructor(props) {
     super(props);
@@ -135,7 +134,7 @@ app의 크기가 커진다면 `DataSource`를 subscribe하고 `setState`를 요�
 
 <!-- -->
 
-```react
+```jsx
 const CommentListWithSubscription = withSubscription(
 	CommentList,
   (DataSource) => DataSource.getComments()
@@ -151,7 +150,7 @@ const BlogPostWithSubscription = withSubscription(
 
 `CommentListWithSubscription`과 `BlogPostWithSubscription`이 render 될 때, `CommentList`와 `BlogPost`는 `DataSource`로부터 가장 최신 정보를 받아 `data` prop으로 전달해준다.
 
-```react
+```jsx
 // 이 함수는 컴포넌트를 입력받아 ...
 function withSubscription(WrappedComponent, selectData) {
   // ... 다른 컴포넌트를 리턴한다
@@ -206,7 +205,7 @@ component들과 마찬가지로 `withSubscription`과 wrapped compoenent의 관�
 
 HOC 안에서 컴포넌트의 prototype을 수정하려는 유혹에서 벗어나야한다.
 
-```react
+```jsx
 function logProps(InputComponent) {
   InputComponent.prototype.componentWillReceiveProps = function(nextProps) {
     console.log('Current props: ', this.props);
@@ -226,7 +225,7 @@ HOC를 변형하는 건 결함이 많은 추상화다. consumer는 다른 HOC와
 
 mutation을 사용하는 대신, HOC는 container component 안에 있는 input component를 덮는 composition을 사용해야한다. 
 
-```react
+```jsx
 function logProps(WrappedComponent) {
   return class extends React.Component {
     componentWillReceiveProps(nextProps) {
@@ -255,7 +254,7 @@ HOC는 component에 특성을 추가한다. HOC로부터 return된 component는 
 
 HOC는 구체적인 일에 관련되지 않은  props를 전달해야 한다. 대부분의 HOC는 다음과 같은 render method를 가지고 있다.
 
-```react
+```jsx
 render() {
   // HOC에 연관된 props만 걸러낸다.
   const { extraProp, ...passThroughProps } = this.props;
@@ -283,7 +282,7 @@ render() {
 
 모든 HOC가 똑같이 생기진 않았다. 가끔은 wrapped component에 단 하나의 argument만 허용한다:
 
-```react
+```jsx
 const NavbarWithRouter = withRouter(Navbar);
 ```
 
@@ -291,7 +290,7 @@ const NavbarWithRouter = withRouter(Navbar);
 
 보통, HOC는 추가적인 arguments를 받아들인다. 이 Relay 예에서 config 객체는 특정 컴포넌트의 data dependencies로 사용된다:
 
-```react
+```jsx
 const CommentWithRelay = Relay.createContainer(Comment, config);
 ```
 
@@ -299,14 +298,14 @@ const CommentWithRelay = Relay.createContainer(Comment, config);
 
 HOC의 가장 보통의 특징은 다음과 같이 생겼다:
 
-```react
+```jsx
 // React Redux's `connect`
 const ConnectedComponent = connect(commentSelector, commentActions)(CommentList);
 ```
 
 이걸 분해해보면 무슨 일이 일어나는지 더 쉽게 보인다.
 
-```react
+```jsx
 // connect는 다른 함수를 리턴하는 함수이다.
 const enhance = connect(commentListSelector, commentListActions);
 // return된 함수는 Redux store에 연결된 컴포넌트를 리턴하는 HOC다. 
@@ -319,7 +318,7 @@ const ConnectedComment = enhance(CommentList);
 
 이 양식은 혼란스럽고 불필요하지만 유용한 성질을 가지고 있다. `connect`에 의해 리턴되는 것과 같은 Single-argument HOC는 `Component => Component`라는 특성을 가진다. output 타입이 input 타입과 같은 함수들은 합성하기 매우 쉽다.
 
-```react
+```jsx
 // 이렇게 하는 대신
 const EnhancedComponent = withRouter(connect(commentSelector)(WrappedComponent))
 
@@ -343,7 +342,7 @@ HOC로 생성된 container component는 [React Developer Tools](<https://github.
 
 가장 일반적인 테크닉은 display name을 wrapped component로 감싸는 것이다. 당신의 HOC 이름이  `withSubscription`이라면 display name `WithSubscription(CommentList)`를 사용해서 wrapped component의 display name은 `CommentList`다.
 
-```react
+```jsx
 function withSubscription(WrappedComponent) {
   class WithSubscription extends React.Component {/* .. */}
   WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
@@ -371,7 +370,7 @@ React's diffing algorithm은 컴포넌트 구분을 할 때 존재하는 서브�
 
 보통, 여기에 대해 생각할 필요는 없다. 하지만 component의 render method에 HOC를 적용할 수 없다는 의미이므로 HOC에 문제를 준다.
 
-```react
+```jsx
 render() {
   // EnhancedComponent1 !== EnhancedComponent2일 때마다 새로운 버전의 EnhancedComponent가 생성된다
   const EnhancedComponent = enhance(MyComponent);
@@ -394,7 +393,7 @@ HOC를 동적으로 적용하는 드문 상황에서도 컴포넌트 lifecycle m
 
  원본 컴포넌트가 container 컴포넌트에 wrapped된 상태더라도 컴포넌트에 HOC를 적용한다면 그건 새로운 컴포넌트가 원본 컴포넌트의 static methods를 가지지 않는다는 의미이다.
 
-```react
+```jsx
 // static method 정의
 WrappedComponent.staticMethod = function() {/* ... */}
 // HOC 적용
@@ -406,7 +405,7 @@ typeof EnhancedComponent.staticMethod === 'undefined' // true
 
 이 문제를 해결하기 위해 리턴하기 전에 메서드를 복사해야한다.
 
-```react
+```jsx
 function enhance(WrappedComponent) {
   class Enhance extends React.Component {/* ... */}
   Enhance.staticMethod = WrappedComponent.staticMethod;
@@ -416,7 +415,7 @@ function enhance(WrappedComponent) {
 
 그러나, 이건 어떤 메소드가 복사를 필요로하는지 알아야한다. [hoist-non-react-statics](<https://github.com/mridgway/hoist-non-react-statics>)를 사용해서 자동으로 non-React static methods를 복사할 수 있다.
 
-```react
+```jsx
 import hoistNonReactStatic from 'hoist-non-react-statics';
 function enhance(WrappedComponent) {
   class Enhance extends React.Component {/*...*/}
@@ -427,7 +426,7 @@ function enhance(WrappedComponent) {
 
 다른 해결책은 static method를 자기 스스로부터 따로따로 export 하는 법이다.
 
-```react
+```jsx
 // Instead of...
 MyComponent.someFunction = someFunction;
 export default MyComponent;
