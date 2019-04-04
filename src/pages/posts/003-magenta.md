@@ -64,7 +64,7 @@ quantizeNoteSequence(ns: INoteSequence, stepsPerQuarter: 숫자): NoteSequence
 
 ##### INoteSequence의 구조
 
-```
+```javascript
 {
   	ticksPerQuarter: 숫자(220),
   	totalTime: 숫자(시드패턴길이/2),

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Post from '../components/Post'
+import PostCard from '../components/PostCard'
 
 import { Container } from 'react-bootstrap'
 
@@ -14,9 +14,9 @@ const tagPosts = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Container>
+      <Container className="mt-4">
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Post
+          <PostCard
             key={node.id}
             slug={node.fields.slug}
             title={node.frontmatter.title}

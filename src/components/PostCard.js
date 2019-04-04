@@ -6,7 +6,7 @@ import { Card, Badge } from 'react-bootstrap'
 import { slugify } from '../utils/utilityFunctions'
 
 // 블로그 포스트 하나의 컴포넌트
-const Post = ({ title, subtitle, author, slug, date, body, tags }) => {
+const PostCard = ({ title, subtitle, author, slug, date, body, tags }) => {
   return (
     <Card className="my-2">
       <Card.Body>
@@ -34,4 +34,4 @@ const Post = ({ title, subtitle, author, slug, date, body, tags }) => {
   )
 }
 
-export default Post
+export default PostCard

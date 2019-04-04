@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import Post from '../components/Post'
+import PostCard from '../components/PostCard'
 import PaginationLinks from '../components/PaginationLinks'
 
 import { Container } from 'react-bootstrap'
@@ -15,7 +15,7 @@ const postList = props => {
     <Layout>
       <Container className="mt-4">
         {posts.map(({ node }) => (
-          <Post
+          <PostCard
             key={node.id}
             slug={node.fields.slug}
             title={node.frontmatter.title}

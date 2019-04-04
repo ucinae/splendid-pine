@@ -15,15 +15,18 @@ const SinglePost = ({ data }) => {
       <SEO title={post.title} />
       <Container className="markdown-body mt-5">
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <ul>
+        <div>
+          <div className="post-tags mr-1">
+            Tags - 
+          </div>
           {post.tags.map(tag => (
-            <li key={tag}>
+            <div className="post-tags mr-2" key={tag}>
               <Link to={`/tag/${slugify(tag)}`}>
-                <Badge>{tag}</Badge>
+                <Badge variant="primary" pill>{tag}</Badge>
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </Container>
     </Layout>
   )
