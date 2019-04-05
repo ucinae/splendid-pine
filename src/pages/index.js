@@ -12,7 +12,7 @@ const IndexPage = (props) => {
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Img fluid={props.data.imageBanner.childImageSharp.fluid} />
-        <Container>
+        <Container className="main">
           <Row className="mt-4">
             <Card className="mx-auto">
               <Card.Body className="text-center">

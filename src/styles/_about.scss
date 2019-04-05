@@ -1,0 +1,26 @@
+.about {
+  .banner {
+    position: relative;
+    background-color: black;
+
+    img {
+      
+      width: auto;
+      height: 400px;
+      size: cover;
+      opacity: 0.5;
+    }
+
+    .about-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      align-content: center;
+    }
+  }
+
+  
+
+  
+}

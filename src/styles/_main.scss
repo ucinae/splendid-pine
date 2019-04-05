@@ -1,9 +1,11 @@
-.banner {
-  background: darkolivegreen;
-  height: 500px;
-  width: 100%;
-}
-
-.center {
-  margin: auto;
+.main {
+  .banner {
+    background: darkolivegreen;
+    height: 500px;
+    width: 100%;
+  }
+  
+  .center {
+    margin: auto;
+  }
 }
