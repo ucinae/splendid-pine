@@ -1,20 +1,21 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 import { Container } from 'react-bootstrap'
-import image from '../images/code-coding-computer.jpg'
 
 // TODO CSS 공부 좀 해서 잘 꾸미기 내가 원하는 스타일대로 맞춰지질 않는다.
-const AboutPage = () => {
+const AboutPage = (props) => {
   return (
     <Layout>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
       <div className="about">
       
         <div className="banner">
-            <img src={image} alt="..."/>
-            <h1 className="about-title">About</h1>
+          <Img className="banner-img" fluid={props.data.imageBanner.childImageSharp.fluid} />
+          <h1 className="about-title">About</h1>
         </div>
         <Container className="mt-5 introduce">
           
@@ -39,5 +40,18 @@ const AboutPage = () => {
     </Layout>
   )
 }
+
+export const aboutQuery = graphql`
+  query {
+    imageBanner: file(relativePath: { eq: "code-coding-computer.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
 
 export default AboutPage

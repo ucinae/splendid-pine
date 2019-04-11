@@ -10,6 +10,11 @@ const solstagram = () => {
       <SEO title="Solstagarm" keywords={[`gatsby`, `application`, `react`]} />
       <Container>
         <Row>
+          <Container>
+            
+          </Container>
+        </Row>
+        <Row>
           <Col>1 of 2</Col>
           <Col>2 of 2</Col>
           <Col>2 of 2</Col>
