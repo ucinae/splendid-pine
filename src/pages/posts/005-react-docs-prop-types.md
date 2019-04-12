@@ -16,7 +16,6 @@ tags:
 # PropTypes
 
 > Note: 
->
 > React v15.5부터 React.PropsTypes가 다른 패키지로 옮겨졌다. 이제 [prop-types](<https://www.npmjs.com/package/prop-types>) 라이브러리를 사용해야한다.
 
 앱이 커지면 타입 체크를 통해 많은 버그를 잡을 수 있다. [Flow](<https://flow.org/>)나 [TypeScript](<https://www.typescriptlang.org/>)를 사용해서 전체 어플리케이션 타입 체크를 하곤 하는데 그런 extensions를 사용하지 않고도 리액트는 타입 체크하는 기능을 가지고 있다. props의 타입 체크를 위해 `propTypes`를 사용하면 된다.

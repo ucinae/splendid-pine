@@ -12,6 +12,8 @@ const tagPosts = ({ data, pageContext }) => {
   //   totalCount === 1 ? '' : 's'
   // } tagged with "${tag}"`
 
+  // TODO subTitle props으로 전달하기
+
   return (
     <Layout>
       <Container className="mt-4">
@@ -20,6 +22,7 @@ const tagPosts = ({ data, pageContext }) => {
             key={node.id}
             slug={node.fields.slug}
             title={node.frontmatter.title}
+            subtitle={node.frontmatter.subtitle}
             author={node.frontmatter.author}
             date={node.frontmatter.date}
             body={node.excerpt}
@@ -43,6 +46,7 @@ export const tagQuery = graphql`
           id
           frontmatter {
             title
+            subtitle
             date(formatString: "MMMM Do YYYY")
             author
             tags
