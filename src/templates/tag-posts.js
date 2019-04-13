@@ -12,8 +12,6 @@ const tagPosts = ({ data, pageContext }) => {
   //   totalCount === 1 ? '' : 's'
   // } tagged with "${tag}"`
 
-  // TODO subTitle props으로 전달하기
-
   return (
     <Layout>
       <Container className="mt-4">

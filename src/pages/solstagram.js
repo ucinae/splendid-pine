@@ -4,6 +4,7 @@ import SEO from '../components/seo';
 
 import { Container, Row, Col } from 'react-bootstrap'
 
+// TODO 솔스타그램 완성 시키기
 const solstagram = () => {
   return (
     <Layout>
