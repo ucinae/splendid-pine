@@ -48,7 +48,8 @@ module.exports = {
               showLineNumbers: false,
               noInlineHighlight: false,
             }
-          }
+          },
+          `gatsby-remark-emoji`, // emoji
         ]
       }
     },
