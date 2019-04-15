@@ -1,0 +1,58 @@
+.solstagram-main {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 93.5rem;
+}
+
+.solstagram-profile {
+  display: flex;
+  
+  padding: 3rem 0;
+  .profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .profile-content {
+    display: flex;
+    align-items: center;
+  }
+  .profile-name {
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin-right: 10px;
+  }
+  .profile-certificate {
+    color: skyblue;
+    margin-right: 25px;
+  }
+  .profile-follow {
+    background: skyblue;
+    color: white;
+    margin-right: 25px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    border-radius: 13%;
+    width: 62px;
+    height: 30px;
+  }
+}
+
+.solstagram-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 10px;
+  justify-content: center;
+  .gallery-item {
+    position: relative;
+    cursor: pointer;
+    height: 250px;
+  }
+}

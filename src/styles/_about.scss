@@ -19,6 +19,20 @@
       border: 2px solid black;
     }
   }
+
+  .contact {
+    i {
+      margin-right: 8px;
+    }
+
+    a {
+      color: black;
+
+      &:hover {
+        background: gray;
+      }
+    }
+  }
 }
 
 .timeline {
