@@ -7,6 +7,7 @@ tags:
 - react
 - Render Props
 - docs
+- translate
 ---
 
 # React Docs으로 공부하는 React 3. Render props

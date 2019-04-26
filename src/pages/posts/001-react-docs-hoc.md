@@ -7,6 +7,7 @@ tags:
 - react
 - HOC
 - docs
+- translate
 ---
 
 # React Docs으로 공부하는 React 1. Higher-Order Component

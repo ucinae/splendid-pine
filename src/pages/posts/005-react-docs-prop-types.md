@@ -7,6 +7,7 @@ tags:
 - react
 - PropTypes
 - docs
+- translate
 ---
 
 # React Docs으로 공부하는 React 4. PropTypes

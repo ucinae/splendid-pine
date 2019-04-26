@@ -7,6 +7,7 @@ tags:
 - react
 - refs
 - docs
+- translate
 ---
 
 # React Docs으로 공부하는 React 5. Refs and the DOM

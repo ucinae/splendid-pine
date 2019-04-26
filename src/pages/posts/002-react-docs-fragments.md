@@ -7,6 +7,7 @@ tags:
 - react
 - fragment
 - docs
+- translate
 ---
 
 
