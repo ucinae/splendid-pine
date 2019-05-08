@@ -18,95 +18,68 @@ const AboutPage = props => {
             className="banner-img"
             fluid={props.data.imageBanner.childImageSharp.fluid}
           />
-          <h1 className="about-title">About</h1>
         </div>
 
         <Container className="mt-5 introduce">
-          <h1>About</h1>
-          <h3>장한솔</h3>
-          <p>
-            아직 학생이므로 관심 가는 분야 닥치는대로 공부해나가는 예비 개발자
-          </p>
+        <div className="profile-grid">
+          {/* Introduce myself */}
+          <div className="profile-top p-4">
+            <Img
+              className="profile-img"
+              fluid={props.data.profileImage.childImageSharp.fluid}
+            />
+            
 
-          <div className="contact">
-            <h5>
-              <i className="fas fa-envelope" />Email
-            </h5>
-            <p>wkdqhrh00@naver.com</p>
-            <h5>
-              <a
-                href="https://github.com/solft"
-                target="_black"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-github" />Github
+            <h1 className="mt-4">장한솔</h1>
+            <p>Student</p>
+
+            <div className="mb-2">
+              <a href="https://splendid-pine.netlify.com/">
+                <i className="fas fa-globe fa-2x"></i>
               </a>
-            </h5>
+              <a href="https://github.com/solft/">
+                <i className="fab fa-github fa-2x"></i>
+              </a>
+            </div>
           </div>
 
-          <section className="timeline">
-            <ol>
-              <li>
-                <div>
-                  <time>2018.07</time>
-                  본격적인 개발 공부 시작 Java를 이용한 안드로이드 개발
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2018.08</time>
-                  머신러닝, 딥러닝에 흥미가 생겨 파이썬과 scikit-learn,
-                  tensorflow 공부
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2018.09</time>
-                  안드로이드 계속 공부 중에 Kotlin이라는 언어를 알게되고
-                  Kotlin으로 안드로이드 개발 시작
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2018.11</time>
-                  programmers에서 주최한 winter coding 지원. 떨어지고 곧바로
-                  Flutter 공부 시작
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2018.12</time>
-                  Web 공부 시작 Javascript 부터 차근차근 동시에 Node.js도 같이
-                  공부
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2019.01</time>
-                  Vue 공부 시작 Vue를 비롯한 Vuex, Vuetify 등등을 함께 배움
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2019.02</time>
-                  React 공부 시작
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2019.03</time>
-                  GraphQL을 공부한 뒤 Gatsby를 활용해 React 블로그 개발 시작!!!
-                </div>
-              </li>
-              <li>
-                <div>
-                  <time>2019.04</time>
-                  CSS, SASS 등의 디자인과 MobX, Redux 등의 React 심화 공부 중~
-                </div>
-              </li>
-              <li />
-            </ol>
-          </section>
+          {/* Skill Set */}
+          <div className="profile-skills p-4">
+            <h2>Stack</h2>
+            <p>Web, Mobile, ML</p>
+            <hr />
+            <h2>Language</h2>
+            <div className="language">
+              <div className="mr-4">
+                <i className="fas fa-check"></i> C++
+              </div>
+              <div className="mr-4">
+                <i className="fas fa-check"></i> Python
+              </div>
+              <div className="mr-4">
+                <i className="fas fa-check"></i> Javascript
+              </div>
+              <div className="mr-4">
+                <i className="fas fa-check"></i> Kotlin
+              </div>
+            </div>
+          </div>
+
+          {/* Achivevement */}
+          <div className="profile-achive p-4">
+            <h2>Achivevement</h2>
+            <div>
+              백준 700+
+            </div>
+            <div>
+              블로그 제작
+            </div>
+            <div>
+              일일커밋 50+
+            </div>
+          </div>
+        </div>
+          
         </Container>
       </div>
     </Layout>
@@ -118,6 +91,14 @@ export const aboutQuery = graphql`
     imageBanner: file(relativePath: { eq: "code-coding-computer.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    profileImage: file(relativePath: { eq: "dog.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
