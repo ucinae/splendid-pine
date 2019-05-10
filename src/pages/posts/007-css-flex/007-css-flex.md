@@ -12,6 +12,8 @@ tags:
 
 # Flexbox
 
+<br />
+
 ### Flex 적용 시키기
 
 **기본 상태**
@@ -45,7 +47,11 @@ body {
 
 이런 html 상태에서 `.one`, `.two`, `.three`에 색만 지정해서 구분하면
 
+<br />
+
 ![Alt text](/flexbox-01.png)
+
+<br />
 
 vertical 방향으로 쌓이게 된다.
 
@@ -58,17 +64,20 @@ vertical 방향으로 쌓이게 된다.
 
 이 상태에서 `.flex-container`에 `display: flex;` 속성을 주면
 
+<br />
+
 ![flexbox-02](/flexbox-02.png)
 
+<br />
 쌓이는 방향이 horizontal 방향으로 바뀐다.
 
-
+<br />
 
 ## flex-basis
 
 flex 항목의 크기를 결정한다. default로 `auto`로 설정되며 해당 태그가 가지는 크기로 설정된다. 만약 크기가 지정되지 않았다면 태그가 가지는 내용물의 크기가 flex-basis 값으로 사용된다. 따라서 `display: flex` 속성만 지정하면 flex 항목들이 각 내용물 크기만큼 공간을 차지하게 된다.
 
-
+<br />
 
 ## flex-grow
 
@@ -88,7 +97,11 @@ flex 항목의 크기를 결정한다. default로 `auto`로 설정되며 해당 
 }
 ```
 
+<br />
+
 ![flexbox-03](/flexbox-03.png)
+
+<br />
 
 값을 다르게 주면 해당 값의 비율 만큼 공간을 가져간다.
 
@@ -104,9 +117,11 @@ flex 항목의 크기를 결정한다. default로 `auto`로 설정되며 해당 
 }
 ```
 
+<br />
+
 ![flexbox-04](/flexbox-04.png)
 
-
+<br />
 
 ## flex-shrink
 
@@ -124,9 +139,11 @@ flex 항목의 크기를 결정한다. default로 `auto`로 설정되며 해당 
 }
 ```
 
+<br />
+
 ![flexbox-05](/flexbox-05.png)
 
-
+<br />
 
 ## flex-wrap
 
@@ -140,10 +157,13 @@ flex 항목의 크기를 결정한다. default로 `auto`로 설정되며 해당 
 }
 ```
 
+<br />
+
 ![flexbox-06](/flexbox-06.png)
 
+---
 
-
+<br />
 
 
 ## flex 간단히
@@ -154,6 +174,8 @@ flex 항목의 크기를 결정한다. default로 `auto`로 설정되며 해당 
 flex: 1 1 auto;
 ```
 
+<br />
+
 #### 더 간단히
 
 ```css
@@ -163,9 +185,7 @@ flex: none; == flex: 0 0 auto;
 flex: 숫자; == flex: 숫자 1 0;
 ```
 
-
-
-
+<br />
 
 ## flex-flow
 
@@ -181,9 +201,7 @@ flex-flow: column-reverse;
 flex-flow: row-reverse;
 ```
 
-
-
-
+<br />
 
 ## align-items & justify-content
 

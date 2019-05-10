@@ -14,7 +14,7 @@ tags:
 
 > reactjs.org의 docs를 번역하며 공부한 내용을 정리한 글입니다.
 
-
+<br />
 
 # Render Props
 
@@ -33,6 +33,8 @@ tags:
 render props이 얼마나 유용하고 어떻게 작성하는지 알아보자.
 
 ----
+
+<br />
 
 ## Cross-Cutting Concerns[^1]를 위한 Render Props
 
@@ -254,7 +256,7 @@ render props를 사용하면 두 가지 패턴 모두 사용 가능하다.
 
 ---
 
-
+<br />
 
 ### "render" 말고 다른 이름으로 render props 사용하기
 
@@ -290,9 +292,9 @@ Mouse.propTypes = {
 
 ---
 
+<br />
 
-
-## :warning: Caveats (경고)
+## ⚠️ Caveats (경고)
 
 **React.PureComponent와 render prop을 같이 사용할 때 주의!**
 

@@ -10,13 +10,11 @@ tags:
 - translate
 ---
 
-
-
 # React Docs으로 공부하는 React 2. Fragments
 
 > reactjs.org의 docs를 번역하며 공부한 내용을 정리한 글입니다.
 
-
+<br />
 
 ## Fragments
 
@@ -35,6 +33,7 @@ render() {
 ```
 
 ---
+<br />
 
 ### Motivation
 
@@ -85,6 +84,7 @@ class Columns extends React.Component {
 Fragments가 이 문제를 해결 할 수 있다.
 
 ---
+<br />
 
 ### Usage
 
@@ -112,7 +112,7 @@ class Columns extends React.Component {
 </table>
 ```
 
-
+<br />
 
 ### Short Syntax
 
@@ -133,7 +133,7 @@ class Columns extends React.Component {
 
 keys나 attributes를 사용하지 않는다면 `<></>`를 사용 가능하다. 아직 모든 툴이 이걸 지원하진 않지만 그럴 땐 `<React.Fragment>`를 사용하면 된다.
 
-
+<br />
 
 ### Keyed Fragments
 

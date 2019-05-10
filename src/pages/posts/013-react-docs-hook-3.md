@@ -1,6 +1,6 @@
 ---
 title: 'React Hook 3. Effect Hook'
-subtitle: ''
+subtitle: 'componentDidMount + componentDidUpdate + componentWillUnmount = useEffect'
 date: 2019-05-02 09:49:00
 author: 'hansol'
 tags:
@@ -42,13 +42,13 @@ function Example() {
 
 * `useEffect`는 React class의 `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`를 묶어놓은 것이라고 생각하면 된다.
 
-
+<br />
 
 ## Effects without Cleanup
 
 React가 DOM을 update하고나서 추가적인 코드수행을 원할때가 있는데 이런 상황에서 class와 hook의 차이를 알아보자
 
-
+<br />
 
 ### Classes 사용한 예
 
@@ -88,7 +88,7 @@ class Example extends React.Component {
 
 예에서 볼 수 있듯이 두 lifecycle methods안에 중복되는 코드가 발생한다.
 
-
+<br />
 
 ### Hooks를 사용한 예
 
@@ -119,9 +119,9 @@ function Example() {
 
 **`useEfect`는 render될 때마다 실행되는가?** Yes! 
 
+<br />
 
-
-### 자세한 설명
+### 🔍 자세한 설명
 
 ```jsx
 function Example() {
@@ -139,11 +139,13 @@ function Example() {
 
 ---
 
-
+<br />
 
 ## Effects with Cleanup
 
 어떤 상황에서는 외부 데이터를 subscription 해야할 경우가 있다. 이럴 경우 clean up을 통해 메모리 누수를 막는게 중요하다. 친구가 온라인 상태인지 알려주는 `ChatAPI`를 사용한 예제를 통해 class와 Hook을 비교해 보자.
+
+<br />
 
 ### Classes 사용 예
 
@@ -182,6 +184,8 @@ class FiendStatus extends React.Component {
 
 `componentDidMount`와 `componentWillUnmount`는 서로 연관되어 있다. Lifecycle methods는 개념적으로 연관된 로직을 분리시킨다.
 
+<br />
+
 ### Hooks 사용 예
 
 `useEffect` 내에서 함수를 return하면 React가 clean up할 시간에 이를 실행한다.
@@ -216,9 +220,11 @@ function FriendStatus(props) {
 
 ---
 
+<br />
 
+## 🛁 정리
 
-## 정리
+<br />
 
 **Cleanup이 필요한 경우**
 
@@ -231,6 +237,7 @@ useEffect(() => {
 })
 ```
 
+
 **Cleanup이 필요 없는 경우**
 
 ```jsx
@@ -241,9 +248,11 @@ useEffect(() => {
 
 ---
 
-
+<br />
 
 ## :pushpin: Effects 사용 팁
+
+<br />
 
 #### Tip : 개념을 분리하기 위해 여러 Effects를 사용해라
 
@@ -312,7 +321,7 @@ function FriendStatusWithCounter(props) {
 
 Hook을 사용해 lifecycle 이름이 아닌 수행중인 작업 기반으로 코드를 분리할 수 있다. React는 모든 effect를 지정한 순서대로 적용한다.
 
-
+<br />
 
 #### Tip : Effects를 skip해서 최적화하기
 

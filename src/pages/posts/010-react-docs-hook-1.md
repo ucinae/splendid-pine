@@ -11,6 +11,8 @@ tags:
 
 # React Hooks 1. 맛보기
 
+<br />
+
 ## Hook란 무엇인가.
 
 React 16.8 버전부터 사용 가능하게 된 react의 새로운 기능이다.
@@ -23,17 +25,23 @@ React 16.8 버전부터 사용 가능하게 된 react의 새로운 기능이다.
 
 React Docs에서는 기존의 React에 다음과 같은 문제가 있다고 설명하고 있다.
 
+<br />
+
 ##### 1. stateful logic을 컴포넌트 사이에서 재사용하기 어렵다.
 
 React에서는 store에 접속하는 것과 같은 행동을 재사용할 때 `render props`나 `higher-order-components`를 이용해 해결해왔다. 그런데 이러한 패턴들은 사용하다 보면 wrapper가 엄청 많이 겹쳐지는 wrapper hell"이 나타나는 문제가 발생한다. wrapper들을 필터링 할 수도 있지만 근본적인 문제 해결이 필요했다.
 
 hook을 이용해서 stateful logic을 컴포넌트에서 분리하고 독립적으로 재사용하면된다. Hook이 컴포넌트 계층을 바꾸지 않고 stateful logic을 재사용 가능하게 한다.
 
+<br />
+
 ##### 2. 복잡한 컴포넌트는 이해하기 어렵다
 
 컴포넌트가 초기에는 간단하지만 시간이 지날 수록 stateful logic이나 side effects가 많아진다. 그러면서 lifecycle method에 관련이 없는 logic들이 섞이게 된다.
 
 이러한 문제를 해결하는데도 hook이 사용된다.
+
+<br />
 
 ##### 3. class는 사람에게도 헷갈리고 컴퓨터에게도 헷갈린다.
 
@@ -43,15 +51,19 @@ javascript에서의 `this` 는 다른 언어에서와 다르다.  그래서 java
 
 이러한 문제를 hook이 해결 할 수 있다.
 
-
+<br />
 
 ##### 결론 적으로 점차적으로 hook을 적용하면 될 것이다.
 
 classes가 react에서 사라질 계획은 없기 때문에 기존의 class component를 사용해도 된다.
 
+---
 
+<br />
 
 ## Hooks 맛보기
+
+<br />
 
 ### :pushpin: State Hook
 
@@ -79,6 +91,8 @@ function Example() {
 
 `useState`에 들어가는 argument는 초기 state다. 위의 예에서는 0 값이 카운터의 초기값으로 들어갔다. 초기값은 처음 render될 때 사용된다.
 
+<br />
+
 #### 여러 state variable들 선언하기
 
 ```jsx
@@ -94,7 +108,7 @@ array destructuring 문법으로 `useState`를 이용해 만든 state variable�
 
 지금까지 살펴본 `useState` 말고도 React는 다양한 Hooks를 가지고있다. 추가로 직접 Hook을 만들 수도 있다.
 
-
+<br />
 
 ## 🔍 Effect Hook
 
@@ -181,8 +195,9 @@ function FriendStatusWithCounter(props) {
   // ...
 ```
 
+---
 
-
+<br />
 
 
 ## :v: Hooks의 두가지 규칙
@@ -190,7 +205,7 @@ function FriendStatusWithCounter(props) {
 * 최상위 level에서만 Hooks을 호출하자.
 * React function components에서만 Hooks을 호출하자.
 
-
+<br />
 
 ## :bulb: 직접 만드는 Hooks
 
@@ -244,11 +259,7 @@ function FriendListItem(props) {
 }
 ```
 
-
-
-
-
-
+<br />
 
 ## :electric_plug: 그밖의 자주 사용하는 Hooks들
 

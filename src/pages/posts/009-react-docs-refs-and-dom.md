@@ -14,15 +14,17 @@ tags:
 
 > reactjs.org의 docs를 번역하며 공부한 내용을 정리한 글입니다.
 
-
+<br />
 
 # Refs and the DOM
 
 > Refs는 DOM node에 접근하거나 render method로 생성된 React elements에 접근하는 방법을 제공한다.
 
-
+<br />
 
 일반적인 React 데이터흐름에서, props는 parent components에서 children components로 상호작용하는 유일한 방법이다. child를 수정하기 위해 새로운 props와 함께 다시 render할 것이다. 그러나 일반적인 dataflow가 아닌 부득이하게 child를 수정해야할 경우가 있기도 하다. 수정될 child는 React Component가 될 수도 있고 DOM element가 될 수도 있다. 두가지 경우 모두 React는 방법을 제공한다.
+
+<br />
 
 ### Refs를 사용해야 할 때
 
@@ -36,7 +38,7 @@ declaratively(선언적으로?)하게 완료할 수 있는 모든 곳에는 refs
 
 예를들어, `Dialog` component의 `open()`과 `close()` methods를 노출시키는 대신 `isOpen` prop으로 전달하는게 좋다.
 
-
+<br />
 
 ### Refs를 많이 사용하지 마라
 
@@ -46,7 +48,7 @@ app에서 어떤 일을 일어나게 하게끔 refs를 사용하려는 경향이
 >
 > 아래의 예시는 업데이트된 React 16.3의 `React.createRef()` API를 사용한다. 더 이른 버전의 리액트를 사용하면 callback refs를 사용하길 추천한다.
 
-
+<br />
 
 ### Refs 만들기
 
@@ -64,7 +66,7 @@ class MyComopnent extends React.Component {
 }
 ```
 
-
+<br />
 
 ### Refs에 접근하기
 
@@ -82,7 +84,7 @@ ref의 값은 node의 type에 따라 달라진다.
 
 아래에 3가지 경우의 예시를 보여준다.
 
-
+<br />
 
 #### DOM Element에 Ref 달기
 
@@ -122,7 +124,7 @@ class CustomTextInput extends React.Component {
 
 React는 component가 mount될 때 DOM element를 `current` 속성에 할당하고, unmount 되면 `null`을 할당 할 것이다. `ref`는 lifecycle methods인 `componentDidMount`나 `componentDidUpdate` 전에 업데이트 된다.
 
-
+<br />
 
 #### Class Component에 Ref 달기
 
@@ -155,7 +157,7 @@ class CustomTextInput extends React.Component {
 }
 ```
 
-
+<br />
 
 #### Function Components에서 refs
 
@@ -208,7 +210,7 @@ function CustomTextInput(props) {
 }
 ```
 
-
+<br />
 
 ### Parent Components에 DOM refs 노출시키기
 
@@ -222,7 +224,7 @@ React 16.2 이하의 버전을 사용하거나 ref forwarding보다 더 유연�
 
 가능하다면 DOM nodes를 노출하지 말자. 이러한 접근은 child component에 추가적인 코드를 필요로한다. 만약 child component 구현에 제어권이 없으면 마지막 방안은 `findDOMNode()`를 사용하는 것인데 이는 `StrictMode`에서 사용하지 못한다.
 
-
+<br />
 
 ### Callback Refs
 
@@ -296,7 +298,7 @@ class Parent extends React.Component {
 
 위의 예에서 `Parent`는 ref callback을 `inputRef` prop으로 `CustomTextInput`에 전달한다. 그리고 `CustomTextInput`은 같은 callback을 `ref` prop으로 `<input>`에 전달한다. 즉, `Parent`의  `this.inputElement`는 `CustomTextInput`의 `<input>` element에 대응된다.
 
-
+<br />
 
 ### Legacy API: String Refs
 
@@ -306,7 +308,7 @@ class Parent extends React.Component {
 >
 > 현재 refs에 접근하는데 `this.refs.textInput`를 사요한다면 `callback pattern`이나 `createRef API`를 사용하길 추천한다.
 
-
+<br />
 
 ### callback refs 경고
 

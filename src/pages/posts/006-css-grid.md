@@ -12,6 +12,8 @@ tags:
 
 # :bar_chart: CSS Grid
 
+<br />
+
 ### 기본 html 상태
 
 기본 상태에서는 `<div>`가 탑처럼 쌓여있다. 여기서 grid를 사용하여 다양하게 위치를 변경시킬 수 있다.
@@ -30,7 +32,8 @@ tags:
 </div>
 ```
 
-
+---
+<br />
 
 ### grid 사용하기
 
@@ -42,7 +45,7 @@ tags:
 }
 ```
 
-
+<br />
 
 ### :fork_and_knife: grid-template-columns
 
@@ -100,6 +103,8 @@ columns(열)에 대한 grid 설정을 한다.
 }
 ```
 
+<br />
+
 ### :flashlight: grid-template-rows
 
 rows에 대한 grid를 설정한다. 사용법은 `grid-template-columns`와 동일하다.
@@ -121,9 +126,7 @@ rows에 대한 grid를 설정한다. 사용법은 `grid-template-columns`와 동
 }
 ```
 
-
-
-
+<br />
 
 ### grid-auto-columns, grid-auto-rows
 
@@ -150,13 +153,13 @@ rows에 대한 grid를 설정한다. 사용법은 `grid-template-columns`와 동
 }
 ```
 
-
+<br />
 
 ### :star: grid-auto 랑 grid-template의 차이점
 
 `grid-template-columns`와 `grid-template-rows`는 columns와 rows를 직접 정의하는 것이고 이렇게 정의한 columns와 rows를 explicit grid라고 한다. 반면 grid가 콘텐츠에 맞게 알아서 만들어주는 columns와 rows는 implicit grid라고 하는데 이들의 크기를 지정하는건 `grid-auto-columns`와 `grid-auto-rows`를 사용한다.
 
-
+<br />
 
 ### :triangular_ruler: gap
 
@@ -185,11 +188,14 @@ column과 row 사이에만 따로 여백주기도 가능하다.
 }
 ```
 
-
+---
+<br />
 
 ## :straight_ruler: Grid Line
 
 만들어진 grid에서 만들어지는 line(외곽선)들이다. 이를 이용해서 콘텐츠들을 원하는 위치에 배치할 수 있다.
+
+<br />
 
 ### grid-column
 
@@ -218,7 +224,7 @@ column 위치 지정
 }
 ```
 
-
+<br />
 
 ### grid-row
 
@@ -230,7 +236,8 @@ row 위치 지정. column과 사용법이 동일하다.
 }
 ```
 
-
+---
+<br />
 
 ## :construction: Grid Area
 
@@ -264,13 +271,13 @@ grid area는 영역에 이름을 붙이고 그영역이 차지하는 공간을 "
 }
 ```
 
-
+<br />
 
 ## Nested Grid
 
 grid 만드는 것과 동일하게 grid 내부의 아이템 안에 만들면된다. 만들어도 상위 부모 요소의 grid와 아무런 관계가 없기 때문에 물려받는 것도 없다.
 
-
+<br />
 
 ## Aligning & Justifying
 

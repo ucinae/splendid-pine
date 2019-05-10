@@ -14,6 +14,8 @@ tags:
 
 > reactjs.org의 docs를 번역하며 공부한 내용을 정리한 글입니다.
 
+<br />
+
 # PropTypes
 
 > Note: 
@@ -39,7 +41,7 @@ Greeting.propTypes = {
 
 `PropTypse`는 받을 데이터가 유효한지 확인하는 일련의 검사를 한다. 이 예에서는, `PropTypes.string`을 사용했다. 만약 잘못된 값이 prop으로 부터 전달된다면, JavaScript 콘솔에 경고가 뜰 것이다. 성능상의 이유로 `propTypes`는 개발 모드에서만 검사를 한다.
 
-
+<br />
 
 ### PropTypes
 
@@ -119,7 +121,7 @@ MyComponent.propTypes = {
 }
 ```
 
-
+<br />
 
 ### Requiring Single Child
 
@@ -145,7 +147,7 @@ MyComponent.propTypes = {
 }
 ```
 
-
+<br />
 
 ### Default Prop Values
 

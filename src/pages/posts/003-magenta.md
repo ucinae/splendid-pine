@@ -11,13 +11,15 @@ tags:
 
 # Magenta
 
+<br />
+
 ## 설치 & 세팅
 
 `npm i @magenta/music`으로 설치 후
 
 `import * as mm from '@magenta/music';`으로 불러온다.
 
-
+<br />
 
 ## 학습된 모델 불러오기
 
@@ -32,9 +34,11 @@ Magenta에는 몇가지 머신러닝 모델이 있는데 그 중 MusicRNN과 Mus
 
 **MusicVAE** : 두 개의 sequences를 보간해서 새로운 NoteSequence를 만든다.
 
-
+<br />
 
 ## 모델 사용
+
+<br />
 
 ### MusicRNN
 
@@ -52,7 +56,7 @@ MusicRNN.continueSequence(시퀀스, 스탭, 온도)
 	.then(r => r가지고 처리)
 ```
 
-
+<br />
 
  #### 첫 번째 파라미터인 `INoteSequence` 만드는 법
 
@@ -61,6 +65,8 @@ MusicRNN.continueSequence(시퀀스, 스탭, 온도)
 ```javascript
 quantizeNoteSequence(ns: INoteSequence, stepsPerQuarter: 숫자): NoteSequence
 ```
+
+<br />
 
 ##### INoteSequence의 구조
 
@@ -85,6 +91,8 @@ quantizeNoteSequence(ns: INoteSequence, stepsPerQuarter: 숫자): NoteSequence
 }
 ```
 
+<br />
+
 ##### 노트배열의 구조
 
 ```javascript
@@ -97,6 +105,8 @@ quantizeNoteSequence(ns: INoteSequence, stepsPerQuarter: 숫자): NoteSequence
   ...
 ]
 ```
+
+<br />
 
 ##### NoteSequence의 구조
 
@@ -118,7 +128,7 @@ quantizeNoteSequence(ns: INoteSequence, stepsPerQuarter: 숫자): NoteSequence
 }
 ```
 
-
+<br />
 
 ### unquantized와 quantized의 차이
 
@@ -148,7 +158,7 @@ quantizeNoteSequence(ns: INoteSequence, stepsPerQuarter: 숫자): NoteSequence
 }
 ```
 
-
+<br />
 
 ## continueSequence로 다음 sequence 만들기
 
@@ -163,7 +173,7 @@ generateSequence = async () => {
 
 일단 이런 식으로 하면 됨
 
-
+<br />
 
 ## 문제
 

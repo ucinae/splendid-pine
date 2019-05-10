@@ -12,6 +12,8 @@ tags:
 
 # Animation Basic
 
+<br />
+
 ## 기본 axis
 
 **x-axis**: :arrow_right: 이 방향이 기본
@@ -22,7 +24,7 @@ tags:
 
 플레밍의 왼손 법칙 방향으로 생각하면 된다. (엄지-Z, 검지-X, 중지-Y)
 
-
+<br />
 
 ### transform-origin
 
@@ -58,13 +60,14 @@ transform-origin: right bottom 2cm;
 transform-origin: bottom right 2cm;
 ```
 
-
-
-
+---
+<br />
 
 ## Transform
 
-### 이동 시키기 - `transform: translate()`
+<br />
+
+#### 이동 시키기 - `transform: translate()`
 
 축을 기준으로 평행 이동
 
@@ -77,7 +80,9 @@ transform: translateX(tx);
 transform: translateY(ty);
 ```
 
-### 확대, 축소 - `transform: scale()`
+<br />
+
+#### 확대, 축소 - `transform: scale()`
 
 ```css
 transform: scale(s); /* 하나는 x, y 둘 다 scale */
@@ -88,7 +93,9 @@ transform: scaleX();
 transform: scaleY();
 ```
 
-### 회전시키기 - `transform: rotate()`
+<br />
+
+#### 회전시키기 - `transform: rotate()`
 
 축을 기준으로 양수면 시계방향, 음수면 반시계 방향으로 회전
 
@@ -103,7 +110,8 @@ transform: rotateY();
 transform: rotateZ();
 ```
 
-
+---
+<br />
 
 ## Transition
 
@@ -136,7 +144,9 @@ transition: <property> <duration> <timing-function> <delay>;
 }
 ```
 
+---
 
+<br />
 
 ## Keyframes
 

@@ -1,39 +1,4 @@
 // TODO Delete
 .markdown-body {
-  blockquote {
-    border-left: 3px solid $info;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #e0e0e0;
-    color: #1a1a1a;
-    font-size: 1.25em;
-    font-style: italic;
-    line-height: 1.8em;
-    margin: 1.1em -2em;
-    padding: 1em 2em;
-    position: relative;
-    transition: .2s border ease-in-out;
-    z-index: 0;
-  }
-
-  blockquote::before {
-    color: $info;
-    content: '"';
-    font-size: 4em;
-    line-height: 0.1rem;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-  
-  .language-text {
-    background: none;
-    color: tomato;
-  }
-
-  code {
-    font-family: $code-font;
-  }
-
-  .post-tags {
-    display: inline-block;
-  }
+  font-family: 'Nanum Gothic Coding';
 }

@@ -10,7 +10,7 @@ tags:
 
 # Apriori algorithm
 
-
+<br />
 
 ### :green_book: 사전 지식
 
@@ -22,9 +22,13 @@ Apriori algorithm을 알기전에 **연관 규칙 분석(Association Rule)**을 
 
 "씨리얼을 산다면 우유도 산다"에서 "씨리얼을 산다면"에 해당하는 부분이다.
 
+<br />
+
 #### Consequent(결과절)
 
 "씨리얼을 산다면 우유도 산다"에서 "우유도 산다"에 해당하는 부분이다.
+
+<br />
 
 #### Itemset(아이템셋)
 
@@ -34,25 +38,31 @@ antecedent와 consequent 상황 발생에 들어있는 아이템 집합이다.
 
 여기서 antecedent의 itemset과 consequent의 itemset에 겹치는게 있으면 안된다.(교집합이 없어야 한다.)
 
+<br />
+
 #### support(지지도)
 
 $X \Rightarrow Y$이고, $X, Y$가 itemset일 때, 전체 데이터 중에 $X, Y$를 동시에 포함하는 데이터의 수이다.
+
+<br />
 
 #### Confidence(신뢰도)
 
 $X \Rightarrow Y$이고, $X, Y$가 itemset일 때, $X$를 포함하는 데이터 중에 $X, Y$를 동시에 포함하는 데이터의 수이다.
 
+<br />
+
 -------
 
+<br />
 
-
-### :cloud_with_rain: 필요성
+### 💧 필요성
 
 그렇다면 빈번하게 발생하는 아이템셋을 어떻게 찾을 것인가가 문제가 된다. 발생하는 아이템들의 모든 부분 집합을 다 구해야 되는데 그러면 복잡도가 너무 커져서 사용할 수가 없다. 그래서 효율적으로 의미있는 서브셋들을 구하는 알고리즘이 필요한데 그것이 바로 **Apriori algorithm**이다.
 
+<br />
 
-
-### :rainbow: 원리
+### 🔑 원리
 
 알고리즘에 대해 알기전에 원리부터 알아보면 **apriori principle**이란 어느 itemset이 빈번하게 발생한다면 그 itemset의 모든 subset들은 반드시 빈번하게 발생해야 한다는 원리이다. 이를 수식으로 써본다면
 $$
@@ -60,9 +70,9 @@ $$
 $$
 이 식을 다시 말로 설명하면 "모든 itemset X, Y에 대해서 X가 Y에 포함된다면 (부분집합이라면) X의 support는 Y의 support보다 크거나 같다."가 된다.
 
+<br /><br />
 
-
-## Apriori algorithm
+## 🔍 Apriori algorithm
 
 그럼 이제 알고리즘 과정을 살펴보자.
 
@@ -78,7 +88,11 @@ apriori algorithm은 두 단계로 구성된다.
 
 글로 적어보니 이해하기 힘든데 Pseudo-code로 살펴보면
 
+<br />
+
 #### Apriori algorithm Pseudo-code
+
+---
 
 $C_k$ : 크기 k짜리 가능성 있는 아이템셋
 
@@ -98,7 +112,9 @@ $L_1$ = {아이템 하나짜리 서브셋들}
 
 **return** 모든 $L$;
 
+---
 
+<br />
 
 마지막으로 예시 하나를 들어 설명 해보면 개발자의 기술 스택을 담은 데이터가 있다고 가정해보자. 그리고 연관 분석을 통해 어느 언어를 알면 어느 언어도 알지(상관이 있을지 모르겠지만) 분석해보자.
 

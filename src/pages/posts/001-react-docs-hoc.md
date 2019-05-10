@@ -14,11 +14,13 @@ tags:
 
 > 본 시리즈는 reactjs.org의 Docs 강의를 따라가며 공부한걸 정리한 내용입니다.
 
+<br />
+
 ## Higher-Order Components
 
 > higer-order component (HOC)는 리액트에서 컴포넌트를 재사용 하기 위한 방법 중 하나이다.
 
-
+<br />
 
 hoc는 컴포넌트를 받아서 새로운 컴포넌트를 return하는 함수다. 특정 상황에만 기능을 추가하거나, 여러 컴포넌트에 동일한 기능을 추가하고 싶을 때 사용하면 유용하다.
 
@@ -36,6 +38,7 @@ HOC들은 Redux의 [`connect`](https://github.com/reduxjs/react-redux/blob/maste
 
 
 ----
+<br />
 
 
 
@@ -200,6 +203,7 @@ component들과 마찬가지로 `withSubscription`과 wrapped compoenent의 관�
 
 
 ---
+<br />
 
 
 ## 원본 컴포넌트를 수정하지 말고 Composition을 사용
@@ -246,7 +250,7 @@ function logProps(WrappedComponent) {
 아마 **container components**와 HOC 사이에 비슷한 점을 알 수 있을 것이다. Container components는 high-level과 low-level 사이의 책음을 분리시키는 전략 중 하나이다. Containers는 subscriptions와 state를 관리하고 rendering UI를 다루는 components에 props를 전달한다. HOC는 containers를 자신의 구현의 일부로 사용한다. HOC를 파라미터화된 container component로 생각할 수 있다.
 
 ---
-
+<br />
 
 
 ## Convention: Wrapped Component를 사용해서 연관되지 않은 props 전달하기
@@ -276,6 +280,7 @@ render() {
 이 Convention이 HOC가 유연하고 재사용 가능하도록 보장하는데 도움을 줄 것이다.
 
 ---
+<br />
 
 
 
@@ -334,7 +339,7 @@ const EnhancedComponent = enhance(WrappedComponent)
 ```
 
 ---
-
+<br />
 
 
 ## Convention: 쉬운 디버깅을 위한 Display Name  wrap 하기
@@ -356,10 +361,10 @@ function getDisplayName(WrappedComponent) {
 ```
 
 ---
+<br />
 
 
-
-## 경고
+## ⚠️ 경고
 
 React를 처음 접하는 경우 HOC를 사용할 때 주의할 점
 
@@ -386,6 +391,7 @@ render() {
 
 HOC를 동적으로 적용하는 드문 상황에서도 컴포넌트 lifecycle methos 내부나 constructor에서 적용 가능하다.
 
+<br />
 
 
 ### Static Methdos는 반드시 복사
@@ -439,7 +445,7 @@ export { someFunction };
 import MyComponent, { someFunction } from './MyComponent.js';
 ```
 
-
+<br />
 
 ### Refs는 전달할 수 없다.
 

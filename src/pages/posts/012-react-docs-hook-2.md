@@ -56,8 +56,9 @@ class Example extends Component {
 }
 ```
 
+---
 
-
+<br />
 
 
 ## Function Components에서 Hooks
@@ -78,7 +79,7 @@ function Example(props) {
 }
 ```
 
-
+<br />
 
 ## useState
 
@@ -94,7 +95,7 @@ function Example() {
 
 `useState`는 function components에 React state를 추가해주는 기능을 가진다. Function component를 만들고 여기에 state가 필요하다고 느낄 때 class component로 교체하지않고 hook을 추가해서 state를 사용할 수 있다.
 
-
+<br />
 
 ## State Variable 선언하기
 
@@ -128,7 +129,7 @@ function Example() {
 
 `useState`는 2개의 값을 리턴한다. 하나는 현재 state고 다른 하나는 state를 update하는 함수다.
 
-
+<br />
 
 #### State Variables 여러개 사용하기
 
@@ -142,11 +143,11 @@ function ExampleWithManyState() {
 
 이렇게 여러개로 만들면된다.
 
+<br /><br />
 
 
 
-
-## State 읽기
+## 📃 State 읽기
 
 #### 클래스 컴포넌트의 경우
 
@@ -160,11 +161,11 @@ function ExampleWithManyState() {
 <p>카운터 {count}번 클릭</p>
 ```
 
+<br /><br />
 
 
 
-
-## State Update하기
+## 📫 State Update하기
 
 #### 클래스 컴포넌트인 경우
 
@@ -176,9 +177,9 @@ function ExampleWithManyState() {
 
 Function에서 `setCount`와 `count`를 가지고 있으므로 `this`를 사용할 필요가 없다.
 
+<br />
 
-
-## 정리
+## 📝 정리
 
 ```jsx
 import React, { useState } from 'react';
