@@ -6,7 +6,6 @@ import SEO from '../components/seo'
 
 import { Container } from 'react-bootstrap'
 
-// TODO 타임라인 스크롤 좀 잘 구현하기 아직도 about page가 부족하다.
 const AboutPage = props => {
   return (
     <Layout>
@@ -69,13 +68,13 @@ const AboutPage = props => {
           <div className="profile-achive p-4">
             <h2>Achivevement</h2>
             <div>
-              백준 700+
+              백준 750+
             </div>
             <div>
               블로그 제작
             </div>
             <div>
-              일일커밋 50+
+              일일커밋 60+
             </div>
           </div>
         </div>
