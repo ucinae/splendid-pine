@@ -79,6 +79,13 @@ const AboutPage = props => {
             </div>
           </div>
         </div>
+
+        <div>
+          <h2>Experience</h2>
+          <div>
+            2019 NAVER CAMPUS HACKDAY SUMMER 2019-05-16~17
+          </div>
+        </div>
           
         </Container>
       </div>
