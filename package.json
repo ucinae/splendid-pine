@@ -24,7 +24,7 @@
     "gatsby-transformer-sharp": "^2.1.21",
     "katex": "^0.10.2",
     "lodash": "^4.17.11",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
